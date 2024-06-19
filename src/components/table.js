@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './table.css';
 
 const Table = () => {
+    const [searchTerm, setSearchTerm] = useState('');
+
     const dummyData = [
         { vehicleNumber: '1234', vehicleName: 'Toyota', vehicleType: 'SUV', workshopVisits: 5 },
         { vehicleNumber: '5678', vehicleName: 'Honda', vehicleType: 'Sedan', workshopVisits: 3 },
@@ -9,14 +11,27 @@ const Table = () => {
         { vehicleNumber: '1121', vehicleName: 'BMW', vehicleType: 'Convertible', workshopVisits: 2 },
         { vehicleNumber: '3141', vehicleName: 'Audi', vehicleType: 'Coupe', workshopVisits: 6 },
         { vehicleNumber: '5161', vehicleName: 'Mercedes', vehicleType: 'Van', workshopVisits: 4 },
-
     ];
+
+    const handleSearchChange = (e) => {
+        setSearchTerm(e.target.value);
+    };
+
+    const filteredData = dummyData.filter(data =>
+        data.vehicleNumber.includes(searchTerm)
+    );
 
     return (
         <div className="table-container">
             <div className='headinsearch'>
                 <h3>Workshop Movement Details</h3>
-                <input type="text" className="search-bar" placeholder="Search by Vehicle Number" />
+                <input 
+                    type="text" 
+                    className="search-bar" 
+                    placeholder="Search by Vehicle Number" 
+                    value={searchTerm} 
+                    onChange={handleSearchChange} 
+                />
             </div>
             <table className="vehicle-table">
                 <thead>
@@ -30,7 +45,7 @@ const Table = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {dummyData.map((data, index) => (
+                    {filteredData.map((data, index) => (
                         <tr key={index}>
                             <td className="photo-cell">
                                 <div className="round-photo"></div>
@@ -43,7 +58,6 @@ const Table = () => {
                         </tr>
                     ))}
                 </tbody>
-
             </table>
             <button className="table-more-button">More</button>
         </div>

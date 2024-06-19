@@ -1,111 +1,143 @@
-.table-container {
-
-    background: var(--card-bg);
-    height: 600px;
-    width: 100%;
-    align-items: center;
-    border-radius: 8px;
-    transition: all 0.5s ease-in-out;
-    overflow: hidden;
-
+/* General styles */
+:root {
+    --card-bg: #f9f9f9;
+    --background-color: #e0e0e0;
+    --button-color: #8ab14d;
+    --button-font-color: #fff;
+    --secondary-color: #6c757d;
+    --text-color: #333;
+    --header-bg: #8ab14d;
+    --header-color: #fff;
 }
 
+/* Container styles */
+.table-container {
+    background: var(--card-bg);
+    height: auto;
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.table-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading and search bar */
 .headinsearch {
     display: flex;
-    flex-direction: row;
-    /* Change from column to row */
+    justify-content: space-between;
     align-items: center;
-    /* Align items vertically */
-    margin-top: 20px;
-    /* Add margin to the top of the container */
+    margin-bottom: 20px;
 }
 
 h3 {
-    margin-left: 30px;
-    text-align: top;
+    margin: 0;
+    color: var(--text-color);
 }
 
 .search-bar {
-    width: 25%;
-    margin-left: 500px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    /* Adjust margin as needed */
-    padding: 10px;
+    width: 300px;
+    padding: 10px 15px;
     border: 1px solid var(--background-color);
-    border-radius: 15px;
+    border-radius: 20px;
+    outline: none;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
+.search-bar:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
 
+/* Table styles */
 .vehicle-table {
-    width: 85%;
+    width: 100%;
     border-collapse: separate;
-    /* Ensure spacing between rows */
-    border-spacing: 0 10px;
-    /* Create a gap between rows */
-    margin-left: 70px;
-    margin-bottom: 20px;
+    border-spacing: 0 15px;
 }
 
 .vehicle-table th,
 .vehicle-table td {
-    padding: 8px;
+    padding: 15px 20px; /* Adjusted padding for more space */
     text-align: center;
-    background-clip: padding-box;
-    /* Prevents background color from overflowing rounded corners */
-}
-
-.vehicle-table th:first-child,
-.vehicle-table td:first-child {
-    border-top-left-radius: 8px;
-    /* Rounded left edge for the first column */
-    border-bottom-left-radius: 8px;
-    /* Rounded left edge for the first column */
-}
-
-.vehicle-table th:last-child,
-.vehicle-table td:last-child {
-    border-top-right-radius: 8px;
-    /* Rounded right edge for the last column */
-    border-bottom-right-radius: 8px;
-    /* Rounded right edge for the last column */
+    color: var(--text-color);
 }
 
 .vehicle-table th {
-    background-color: var(--background-color);
+    background-color: var(--header-bg);
+    border: 2px solid black; /* Added black border */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .vehicle-table td {
     background-color: var(--card-bg);
+    border: 1px solid var(--background-color);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.vehicle-table td:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.vehicle-table td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
 
+.vehicle-table td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Add margin to each cell for spacing between columns */
+.vehicle-table td:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Photo cell */
 .photo-cell .round-photo {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-color: #ddd;
     border-radius: 50%;
     margin: 0 auto;
 }
 
+/* Action buttons */
 .action-button {
     background-color: var(--button-color);
-    color: var(--button-font-color);
-    border: 1px solid var(--button-color);
-    padding: 8px 12px;
+    color: black;
+    border: none;
+    padding: 8px 15px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
 }
 
+.action-button:hover {
+    background-color: darken(var(--button-color), 10%);
+}
+
+/* More button */
 .table-more-button {
     background-color: var(--button-font-color);
-
     color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
-    padding: 10px 40px;
+    padding: 10px 20px;
     cursor: pointer;
-    border-radius: 4px;
-    margin-right: 60px;
+    border-radius: 5px;
+    margin-top: 20px;
     float: right;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.table-more-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--button-font-color);
 }
