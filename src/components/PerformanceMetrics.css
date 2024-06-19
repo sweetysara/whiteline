@@ -1,0 +1,45 @@
+.performance-metrics {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.legend {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.legend h2 {
+
+    margin-bottom: 10px;
+}
+
+.legend ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legend li {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.chart-container {
+    flex: 2;
+    height: 250px;
+    /* Adjust the height as needed */
+    width: 100%;
+}

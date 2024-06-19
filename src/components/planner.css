@@ -1,0 +1,18 @@
+.planner {
+    background-color: var(--card-bg);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+}
+
+.planner .trip {
+    margin-bottom: 0;
+}
+
+.planner .trip h3 {
+    margin: 0;
+}
+
+.planner .trip p {
+    margin: 5px 0 0;
+}

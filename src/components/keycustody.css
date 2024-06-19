@@ -1,0 +1,99 @@
+.keycustody-table-container {
+    background: var(--button-font-color);
+    height: 700px;
+    width: 93%;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    margin-left: 45px;
+
+}
+
+.keycustody-search-bar {
+    width: 45%;
+    margin-left: 350px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    /* Adjust margin as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+h3 {
+    margin-left: 30px;
+    text-align: top;
+}
+
+.headinsearch {
+    display: flex;
+    flex-direction: row;
+    /* Change from column to row */
+    align-items: center;
+    /* Align items vertically */
+    margin-top: 20px;
+    /* Add margin to the top of the container */
+}
+
+
+.keycustody-vehicle-table {
+    width: 95%;
+    border-collapse: separate;
+    /* Ensure spacing between rows */
+    border-spacing: 0 10px;
+    /* Create a gap between rows */
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.keycustody-vehicle-table th,
+.keycustody-vehicle-table td {
+    padding: 8px;
+    text-align: center;
+    background-clip: padding-box;
+}
+
+.keycustody-vehicle-table th:first-child,
+.keycustody-vehicle-table td:first-child {
+    border-top-left-radius: 8px;
+    /* Rounded left edge for the first column */
+    border-bottom-left-radius: 8px;
+    /* Rounded left edge for the first column */
+}
+
+.keycustody-vehicle-table th:last-child,
+.keycustody-vehicle-table td:last-child {
+    border-top-right-radius: 8px;
+    /* Rounded right edge for the last column */
+    border-bottom-right-radius: 8px;
+    /* Rounded right edge for the last column */
+}
+
+.keycustody-vehicle-table th {
+    background-color: var(--background-color);
+}
+
+.keycutody-vehicle-table td {
+    background-color: var(--background-color);
+}
+
+.keycustody-action-button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.keycustody-more-button {
+    background-color: var(--button-font-color);
+
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    padding: 10px 40px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 30px;
+    float: right;
+}

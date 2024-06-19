@@ -1,0 +1,96 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--button-font-color);
+    background-color: var(--header-color);
+    padding: 10px;
+    position: fixed;
+    width: 83%;
+    /* Added some padding for better spacing */
+}
+
+.header h1 {
+    margin: 0;
+
+    padding-left: 20px;
+    /* Remove default margin */
+}
+
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    /* Centering the search bar by pushing it to the right */
+}
+
+.header input {
+    padding: 6px 40px;
+    border-radius: 20px;
+    /* Rounded edges */
+    border: none;
+    /* Remove default border */
+    outline: none;
+    /* Remove default outline */
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 20px;
+    /* Ensure the profile photo is on the far right */
+}
+
+.profile-photo {
+    width: 40px;
+    /* Set the size of the profile photo */
+    height: 40px;
+    border-radius: 50%;
+    /* Make the profile photo circular */
+    margin-left: 20px;
+    /* Add some space between the search bar and the profile photo */
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    width: calc(100% - 300px);
+    top: 60px;
+    z-index: 1000;
+    background-color: var(--background-color);
+}
+
+.stat-icon img {
+    width: 50px;
+    height: 50px;
+    fill: var(--button-color);
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 10px 30px;
+
+    flex: 1;
+    margin: 0 25px 0 25px;
+    border-left: 10px solid var(--secondary-color);
+}
+
+.stat-icon {
+    margin-right: 10px;
+}
+
+.stat-value {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.stat-label {
+    color: var(--secondary-color);
+}

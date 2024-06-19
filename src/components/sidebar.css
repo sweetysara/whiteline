@@ -1,0 +1,97 @@
+.sidebar {
+    width: 250px;
+    background: linear-gradient(180deg, var(--secondary-color), var(--secondary-color));
+    color: var(--button-font-color);
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+}
+
+.logo {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: -2px;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+    position: relative;
+}
+
+nav ul li a {
+    color: var(--button-font-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a i {
+    margin-right: 10px;
+}
+
+nav ul li.active a {
+    background: var(--background-color);
+    color: var(--secondary-color);
+    border-radius: 25px 0 0 25px;
+    transform: translateX(10px);
+    /* Add slight movement for active state */
+}
+
+nav ul li.active a:before {
+    content: '';
+    width: 15px;
+    height: 100%;
+    background: var(--secondary-color);
+    position: absolute;
+    left: -15px;
+    top: 0;
+    border-radius: 25px 0 0 25px;
+    /* Only the left side is rounded */
+    z-index: -1;
+    /* Send the pseudo-element to the background */
+}
+
+nav ul li:hover a {
+    background: var(--background-color);
+    opacity: 0.5;
+    /* Slightly transparent for smooth transition */
+    color: var(--secondary-color);
+    border-radius: 25px 0 0 25px;
+    transform: translateX(5px);
+
+}
+
+nav ul li:hover a:before {
+    content: '';
+    width: 15px;
+    height: 100%;
+    background: var(--secondary-color);
+    position: absolute;
+    left: -15px;
+    top: 0;
+    border-radius: 25px 0 0 25px;
+    z-index: -1;
+    /* Send the pseudo-element to the background */
+
+}
