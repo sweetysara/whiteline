@@ -51,6 +51,7 @@
     /* Make the profile photo circular */
     margin-left: 20px;
     /* Add some space between the search bar and the profile photo */
+    padding-right: 12px;
 }
 
 .stats {
@@ -58,7 +59,7 @@
     justify-content: space-between;
     padding: 10px;
     position: fixed;
-    width: calc(100% - 300px);
+    width: calc(100% - 276px);
     top: 60px;
     z-index: 1000;
     background-color: var(--background-color);
