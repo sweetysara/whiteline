@@ -9,7 +9,9 @@ import Planner from './planner';
 import Trips from './trips';
 import Table from './table';
 import KeyCustody from './keycustody';
-import Settings from './settings';
+import edit from '../assets/images/edit-3-svgrepo-com.svg'
+import scratch from '../assets/images/car-repair-svgrepo-com (1).svg'
+import location from '../assets/images/car-location-svgrepo-com.svg'
 import carImage1 from '../assets/images/car.jpg';
 import carImage2 from '../assets/images/car.jpg';
 import carImage3 from '../assets/images/car.jpg';
@@ -127,7 +129,10 @@ function Dashboard() {
                                     ))}
                                     <button onClick={goToNext} className="carousel-button right">&#9654;</button>
                                 </div>
+
                                 <Planner />
+
+
                             </div>
                             <div className="right">
                                 <PerformanceMetrics />
@@ -143,7 +148,7 @@ function Dashboard() {
                                 <div className="add-car">
                                     <div className="form-container">
                                         <form className="c-form" onSubmit={handleSubmit}>
-                                            <h2>Add A Car</h2>
+                                            <h2>ADD A CAR</h2>
                                             <div className="c-form-field-row">
                                                 <div className="c-form-field-column">
                                                     <label htmlFor="vehiclename">Vehicle Name</label>
@@ -229,24 +234,48 @@ function Dashboard() {
                                 </div>
                             </div>
                             <div className="right">
-                                <div className="image-section">
+                                {/* <div className="image-section">
                                     <div className="cardss">
-                                        <div className="trip-images" style={{ backgroundImage: `url(${carImage})` }}></div>
-                                        <button className="image-button" onClick={handleEditCarDetailsClick}>Edit Car Details</button>
-                                        <button className="image-button">Add Scratches</button>
+                                        <div className="trip-images" style={{ backgroundImage: `url(${carImage})` }}><div className='oveerlay'></div>
+                                            <div className='button-container'>
+                                                <button className="image-button" onClick={handleEditCarDetailsClick}>Edit Car Details</button>
+                                                <button className="image-button">Add Scratches</button>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                </div>
+                                </div> */}
 
-                                <div className="ccardd">
+                                <button className="edit-cardd">
                                     <div className="iicon-container">
-                                        <img src={carService} alt="Number of Trips Icon" />
+                                        <img src={edit} alt="Edit Icon" className="iicon" />
+                                    </div>
+                                    <div className="text-container">
+                                        <span className="count">EDIT   </span>
+                                        <span className="label">Vehicle Details</span>
+                                    </div>
+                                </button>
+
+
+                                <button className="edit-cardd">
+                                    <div className="iicon-container">
+                                        <img src={scratch} alt="Edit Icon" className="iicon" />
+                                    </div>
+                                    <div className="text-container">
+                                        <span className="count">ADD</span>
+                                        <span className="label">Scratches</span>
+                                    </div>
+                                </button>
+                                <button className="edit-cardd">
+                                    <div className="iicon-container">
+                                        <img src={location} alt="Edit Icon" className="iicon" />
                                     </div>
                                     <div className="text-container">
                                         <span className="count">Check</span>
                                         <span className="label">Vehicle Status</span>
                                     </div>
-                                </div>
+                                </button>
+
                             </div>
                         </div>
                     </div>
@@ -333,7 +362,7 @@ function Dashboard() {
                                                         name="cv"
                                                         id="cv"
                                                         placeholder='Expiry DATE'
-                                                        className="c-file-input"
+                                                        className="c-input-field"
                                                         onChange={handleChange}
                                                     />
                                                 </div>
@@ -345,24 +374,37 @@ function Dashboard() {
 
                             </div>
                             <div className="right">
-                                <div className="image-section">
-                                    <div className="cardss">
-                                        <div className="trip-images" style={{ backgroundImage: `url(${carImage})` }}></div>
-                                        <button className="image-button" onClick={handleEditCarDetailsClick}>Edit Driver Details</button>
-
-                                    </div>
-
-                                </div>
-
-                                <div className="ccardd">
+                                <button className="edit-cardd">
                                     <div className="iicon-container">
-                                        <img src={carService} alt="Number of Trips Icon" />
+                                        <img src={edit} alt="Edit Icon" className="iicon" />
                                     </div>
                                     <div className="text-container">
-                                        <span className="count">64</span>
-                                        <span className="label">Drivers Onboard</span>
+                                        <span className="count">EDIT</span>
+                                        <span className="label">Vehicle Status</span>
                                     </div>
-                                </div>
+                                </button>
+
+
+                                <button className="edit-cardd">
+                                    <div className="iicon-container">
+                                        <img src={scratch} alt="Edit Icon" className="iicon" />
+                                    </div>
+                                    <div className="text-container">
+                                        <span className="count">ADD</span>
+                                        <span className="label">Scratches</span>
+                                    </div>
+                                </button>
+                                <button className="edit-cardd">
+                                    <div className="iicon-container">
+                                        <img src={location} alt="Edit Icon" className="iicon" />
+                                    </div>
+                                    <div className="text-container">
+                                        <span className="count">Check</span>
+                                        <span className="label">Vehicle Status</span>
+                                    </div>
+                                </button>
+
+
 
 
                             </div>

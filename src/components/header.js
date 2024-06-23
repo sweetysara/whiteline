@@ -6,13 +6,21 @@ import carService from '../assets/images/car-service-icon.svg';
 function Header() {
     return (
         <header className="header">
-            <h1>Welcome to 247 Fleet Manager</h1>
-            <div className="search-container">
-                <input type="text" placeholder="Search" />
+
+            <h1>WELCOME TO 247 FLEET MANAGER</h1>
+            <div class="search-container">
+                <input type="text" placeholder="SEARCH" />
             </div>
-            <div className="profile-container">
-                <img src={profilePhoto} alt="Profile" className="profile-photo" />
+            <div class="icons-container">
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-comment-dots"></i>
             </div>
+            <div class="vertical-line"></div>
+            <div class="profile-container">
+                <img src={profilePhoto} alt="Profile" class="profile-photo" />
+            </div>
+
+
             <div className="stats">
                 <div className="stat-card">
                     <div className="stat-icon">

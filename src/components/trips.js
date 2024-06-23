@@ -1,31 +1,41 @@
 import React from 'react';
 import './Trips.css';
+import carImage from '../assets/images/car.jpg';
 
 function Trips() {
     return (
         <div className="trips">
-            <h2>Trips</h2>
+            <div className="trip-navigation">
+                <h2>TRIPS</h2>
+                <span className="future-trips">Future Trips</span>
+                <span className="past-trips">Past Trips</span>
+            </div>
             <div className="trip-container">
                 <div className="trip past-trip">
-                    <div className="trip-image" style={{ backgroundImage: 'url/src/assets/images/car.jpg' }}>
-                        <p>Past Trip</p>
-                        <h3>Dukan to Doha</h3>
-                        <p>10/06/24 <br /> 12:00AM - 6:00PM</p>
+                    <div className="trip-image" style={{ backgroundImage: `url(${carImage})` }}>
+                        <div className="add-button">+</div>
+                        <p className='trip-type'>Past Trip</p>
+                        <h3 className='destination'>Dukan to Doha</h3>
+                        <p className='time'>10/06/24</p>
+                        <p className='date'>12:00AM - 6:00PM</p>
                     </div>
                 </div>
                 <div className="trip current-trip">
-                    <div className="trip-image" style={{ backgroundImage: '/src/assets/images/car.jpg' }}>
-                        <p>Current Trip</p>
-                        <h3>Doha to Dukan</h3>
-                        <p>11/06/24 <br /> 12:00AM - 6:00PM</p>
+                    <div className="trip-image" style={{ backgroundImage: `url(${carImage})` }}>
+                        <div className="add-button">+</div>
+                        <p className='trip-type'>Current Trip</p>
+                        <h3 className='destination'>Doha to Dukan</h3>
+                        <p className='time'>11/06/24 </p>
+                        <p className='date'>12:00AM - 6:00PM</p>
                     </div>
                 </div>
                 <div className="trip future-trip">
-                    <div className="trip-image" style={{ backgroundImage: '/src/assets/images/car.jpg' }}>
-                        <p>Future Trip</p>
-                        <h3>Dukan to Doha</h3>
-                        <p>12/06/24<br />
-                            12:00AM - 6:00PM</p>
+                    <div className="trip-image" style={{ backgroundImage: `url(${carImage})` }}>
+                        <div className="add-button">+</div>
+                        <p className='trip-type'>Future Trip</p>
+                        <h3 className='destination'>Dukan to Doha</h3>
+                        <p className='time'>12/06/24</p>
+                        <p className='date'>12:00AM - 6:00PM</p>
                     </div>
                 </div>
             </div>

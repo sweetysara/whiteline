@@ -1,33 +1,39 @@
 @font-face {
-  font-family: 'Nexa Light';
-  src: url('/public/fonts/Nexa\ Light.otf') format('opentype');
+  font-family: 'Gotham Bold';
+  src: url('/public/fonts/GothamLight.ttf') format('opentype');
+
 }
 
 body {
   margin: 0;
-  font-family: 'Nexa Light', sans-serif;
-  background-color: var(--background-color);
+  font-family: 'Gotham Bold', sans-serif;
+  background-color: white;
+  border-right: 50px solid white;
+
+
+
+  /* Adding a solid white border */
 }
 
 h1 {
-  font-size: 30px;
-}
-
-h2 {
-  font-size: 25px;
-}
-
-h3 {
   font-size: 20px;
 }
 
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 15px;
+}
+
 p {
-  font-size: 17px;
+  font-size: 14px;
 }
 
 /* Green theme */
 :root {
-  --background-color: #d2e0bd;
+  --sec-background-color: #d2e0bd;
   --header-color: #708e46;
   --primary-color: rgba(42, 57, 25, 255);
   --secondary-color: rgba(99, 127, 68, 255);

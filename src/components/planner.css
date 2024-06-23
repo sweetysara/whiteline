@@ -1,18 +1,27 @@
 .planner {
-    background-color: var(--card-bg);
+
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
     margin-top: 5px;
 }
 
-.planner .trip {
+.planner :hover {
+    background: var(--card-bg);
+    /* Replace with your desired background color if --card-bg is not defined */
+    transform: scale(1.01);
+    /* Optional: Adds a slight zoom effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Optional: Adds a shadow effect */
+}
+
+.trip-panner {
     margin-bottom: 0;
 }
 
-.planner .trip h3 {
+.trip-panner h3 {
     margin: 0;
 }
 
-.planner .trip p {
+.trip-panner p {
     margin: 5px 0 0;
 }

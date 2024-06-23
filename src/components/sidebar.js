@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './sidebar.css';
+import logo from '../assets/images/logo.png'; // Adjust the path based on your file structure
 
 function Sidebar() {
     const [activeItem, setActiveItem] = useState('dashboard');
@@ -38,8 +39,7 @@ function Sidebar() {
     return (
         <div className="sidebar">
             <div className="logo">
-                <h1>24/7</h1>
-                <p>FLEET MANAGER</p>
+                <img src={logo} alt="Logo" />
             </div>
             <nav>
                 <ul>
@@ -51,37 +51,37 @@ function Sidebar() {
                     </li>
                     <li className={activeItem === 'profile' ? 'active' : ''} onClick={() => handleItemClick('profile')}>
                         <a href="#profile">
-                            <i className="fas fa-user"></i>
+                            <i className="fa fa-car"></i>
                             Vehicle
                         </a>
                     </li>
                     <li className={activeItem === 'ride-history' ? 'active' : ''} onClick={() => handleItemClick('ride-history')}>
                         <a href="#ride-history">
-                            <i className="fas fa-history"></i>
+                            <i className="fa fa-map-marker"></i>
                             Trips
                         </a>
                     </li>
                     <li className={activeItem === 'vehicle-maintenance' ? 'active' : ''} onClick={() => handleItemClick('vehicle-maintenance')}>
                         <a href="#vehicle-maintenance">
-                            <i className="fas fa-wrench"></i>
+                            <i className="fas fa-user"></i>
                             Driver
                         </a>
                     </li>
                     <li className={activeItem === 'notifications' ? 'active' : ''} onClick={() => handleItemClick('notifications')}>
                         <a href="#notifications">
-                            <i className="fas fa-bell"></i>
+                            <i className="fa fa-wrench"></i>
                             Workshop Movement
                         </a>
                     </li>
                     <li className={activeItem === 'reviews' ? 'active' : ''} onClick={() => handleItemClick('reviews')}>
                         <a href="#reviews">
-                            <i className="fas fa-star"></i>
+                            <i className="fa fa-sticky-note"></i>
                             Notes
                         </a>
                     </li>
                     <li className={activeItem === 'navigation' ? 'active' : ''} onClick={() => handleItemClick('navigation')}>
                         <a href="#navigation">
-                            <i className="fas fa-map"></i>
+                            <i className="fa fa-key"></i>
                             Key Custody
                         </a>
                     </li>
