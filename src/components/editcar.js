@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './editcar.css';
 import carImage from '../assets/images/car.jpg'; // Replace with actual path
 import PopupForm from './PopupForm'; // Assuming PopupForm.js contains your form component
+import PHeader from './pageheader';
 
 function EditCar() {
     const [showPopup, setShowPopup] = useState(false);
@@ -35,6 +36,8 @@ function EditCar() {
 
     return (
         <div className="edit-car-page">
+            <PHeader />
+
             <h2>AVAILABLE CARS</h2>
             <div className="car-grid">
                 {cars.map((car) => (
