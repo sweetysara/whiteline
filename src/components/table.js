@@ -24,13 +24,13 @@ const Table = () => {
     return (
         <div className="table-container">
             <div className='headinsearch'>
-                <h3>Workshop Movement Details</h3>
-                <input 
-                    type="text" 
-                    className="search-bar" 
-                    placeholder="Search by Vehicle Number" 
-                    value={searchTerm} 
-                    onChange={handleSearchChange} 
+                <h2>WORKSHOP MOVEMENT DETAILS</h2>
+                <input
+                    type="text"
+                    className="search-bar"
+                    placeholder="Search by Vehicle Number"
+                    value={searchTerm}
+                    onChange={handleSearchChange}
                 />
             </div>
             <table className="vehicle-table">

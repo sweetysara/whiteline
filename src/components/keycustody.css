@@ -1,32 +1,11 @@
-/* General styles */
-:root {
-    --card-bg: #f9f9f9;
-    --background-color: #e0e0e0;
-    --button-color: #8ab14d;
-    --button-font-color: #fff;
-    --secondary-color: #6c757d;
-    --text-color: #333;
-    --header-bg: #8ab14d;
-    --header-color: #fff;
-}
-
 /* Container styles */
 .keycustody-table-container {
-    background: var(--card-bg);
+
     height: auto;
     width: 90%;
     margin: 30px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 60px;
-    padding-right: 20px;
-}
+    padding: 20px;
 
-.keycustody-table-container:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Heading and search bar */
@@ -42,7 +21,7 @@ h3 {
     color: var(--text-color);
 }
 
-.keycustody-search-bar {
+.search-bar {
     width: 300px;
     padding: 10px 15px;
     border: 1px solid var(--background-color);
@@ -51,7 +30,7 @@ h3 {
     transition: box-shadow 0.3s ease-in-out;
 }
 
-.keycustody-search-bar:focus {
+.search-bar:focus {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
@@ -60,29 +39,25 @@ h3 {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 15px;
-    margin-bottom: 20px;
 }
 
 .keycustody-vehicle-table th,
 .keycustody-vehicle-table td {
-    padding: 15px 20px; /* Adjusted padding for more space */
+    padding: 15px 20px;
+    /* Adjusted padding for more space */
     text-align: center;
-    color: var(--text-color);
-    border: 1px solid black; /* Black border */
+    color: var(--secondary-color);
 }
 
 .keycustody-vehicle-table th {
-    background-color: var(--header-bg);
-    border: 1px solid black; /* Black border */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    background-color: var(--button-color);
+    color: var(--button-font-color);
+
 }
 
 .keycustody-vehicle-table td {
     background-color: var(--card-bg);
-    border: 1px solid var(--background-color);
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
 }
 
 .keycustody-vehicle-table td:hover {
@@ -90,12 +65,14 @@ h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.keycustody-vehicle-table td:first-child {
+.keycustody-vehicle-table td:first-child,
+.keycustody-vehicle-table th:first-child {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
-.keycustody-vehicle-table td:last-child {
+.keycustody-vehicle-table td:last-child,
+.keycustody-vehicle-table th:last-child {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -105,10 +82,11 @@ h3 {
     margin-right: 10px;
 }
 
+
 /* Action buttons */
 .keycustody-action-button {
     background-color: var(--button-color);
-    color: black;
+    color: var(--button-font-color);
     border: none;
     padding: 8px 15px;
     cursor: pointer;
@@ -117,7 +95,7 @@ h3 {
 }
 
 .keycustody-action-button:hover {
-    background-color: darken(var(--button-color), 10%);
+    background-color: var(--secondary-color);
 }
 
 /* More button */
@@ -128,6 +106,7 @@ h3 {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    margin-top: 20px;
     float: right;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }

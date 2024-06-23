@@ -42,7 +42,7 @@ function PerformanceMetrics() {
     return (
         <div className="performance-metrics">
             <div className="legend">
-                <h2>CAR <br /> REVENEW <br /> PERFORMANCE <br /></h2>
+                <h2>CAR REVENEW <br /> PERFORMANCE <br /></h2>
                 <ul>
                     <li><span className="color-box" style={{ backgroundColor: '#a4d65e' }}></span> SUV</li>
                     <li><span className="color-box" style={{ backgroundColor: '#4b682a' }}></span> MPV</li>

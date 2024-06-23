@@ -14,6 +14,8 @@
 .legend h2 {
     text-align: left;
     margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: 17px;
 }
 
 .legend ul {
@@ -30,8 +32,8 @@
 }
 
 .color-box {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     display: inline-block;
     margin-right: 10px;
     border-radius: 4px;
@@ -39,7 +41,7 @@
 
 .chart-container {
     flex: 2;
-    height: 250px;
+    height: 190px;
     /* Adjust the height as needed */
     width: 20px;
 }

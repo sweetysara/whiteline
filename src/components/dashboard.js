@@ -12,6 +12,10 @@ import KeyCustody from './keycustody';
 import edit from '../assets/images/edit-3-svgrepo-com.svg'
 import scratch from '../assets/images/car-repair-svgrepo-com (1).svg'
 import location from '../assets/images/car-location-svgrepo-com.svg'
+import trip from '../assets/images/car-travel-favourite-like-love-heart-svgrepo-com.svg'
+import identity from '../assets/images/id-card-svgrepo-com.svg'
+import driver from '../assets/images/truck-driver-svgrepo-com.svg'
+import notes from '../assets/images/notes-svgrepo-com.svg'
 import carImage1 from '../assets/images/car.jpg';
 import carImage2 from '../assets/images/car.jpg';
 import carImage3 from '../assets/images/car.jpg';
@@ -136,7 +140,9 @@ function Dashboard() {
                             </div>
                             <div className="right">
                                 <PerformanceMetrics />
+
                                 <Trips />
+
                             </div>
                         </div>
                     </div>
@@ -246,7 +252,7 @@ function Dashboard() {
 
                                 </div> */}
 
-                                <button className="edit-cardd">
+                                <button className="edit-cardd" onClick={handleEditCarDetailsClick}>
                                     <div className="iicon-container">
                                         <img src={edit} alt="Edit Icon" className="iicon" />
                                     </div>
@@ -374,33 +380,33 @@ function Dashboard() {
 
                             </div>
                             <div className="right">
-                                <button className="edit-cardd">
+                                <button className="edit-cardd" >
                                     <div className="iicon-container">
-                                        <img src={edit} alt="Edit Icon" className="iicon" />
+                                        <img src={identity} alt="Edit Icon" className="iicon" />
                                     </div>
                                     <div className="text-container">
                                         <span className="count">EDIT</span>
-                                        <span className="label">Vehicle Status</span>
+                                        <span className="label">Driver Details</span>
                                     </div>
                                 </button>
 
 
                                 <button className="edit-cardd">
                                     <div className="iicon-container">
-                                        <img src={scratch} alt="Edit Icon" className="iicon" />
+                                        <img src={notes} alt="Edit Icon" className="iicon" />
                                     </div>
                                     <div className="text-container">
                                         <span className="count">ADD</span>
-                                        <span className="label">Scratches</span>
+                                        <span className="label">Notes</span>
                                     </div>
                                 </button>
                                 <button className="edit-cardd">
                                     <div className="iicon-container">
-                                        <img src={location} alt="Edit Icon" className="iicon" />
+                                        <img src={driver} alt="Edit Icon" className="iicon" />
                                     </div>
                                     <div className="text-container">
-                                        <span className="count">Check</span>
-                                        <span className="label">Vehicle Status</span>
+                                        <span className="count">258</span>
+                                        <span className="label">Drivers OnBoard</span>
                                     </div>
                                 </button>
 
@@ -420,7 +426,7 @@ function Dashboard() {
                             <div class="add-trip">
                                 <div class="form-container">
                                     <form className="c-form" onSubmit={handleSubmit}>
-                                        <h2>Assign Trip</h2>
+                                        <h2>ASSIGN TRIP</h2>
                                         <div className="c-form-field-row">
                                             <div className="c-form-field-column">
                                                 <label htmlFor="vehiclename">Car Name</label>
@@ -496,7 +502,7 @@ function Dashboard() {
                                                     name="odometer"
                                                     id="odometer"
                                                     placeholder='Odometer Reading'
-                                                    className="c-file-input"
+                                                    className="c-input-field"
                                                     onChange={handleChange}
                                                 />
                                             </div>
@@ -510,7 +516,7 @@ function Dashboard() {
                         <div className="right">
                             <div className="ccard">
                                 <div className="iicon-container">
-                                    <img src={carService} alt="Number of Trips Icon" />
+                                    <img src={trip} alt="Number of Trips Icon" />
                                 </div>
                                 <div className="text-container">
                                     <span className="count">56</span>
@@ -568,9 +574,12 @@ function Dashboard() {
                 <section id="navigation">
 
                     <div classname="contents">
+                        <div className='keytables'>
+                            <KeyCustody />
+                        </div>
 
-                        <KeyCustody />
                     </div>
+
                 </section>
                 <section id="settings">
                     <h2>Settings</h2>

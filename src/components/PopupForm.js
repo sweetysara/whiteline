@@ -89,7 +89,7 @@ const PopupForm = ({ car, onSubmit, onClose }) => {
                             />
                         </div>
                         <div className="popup-form-field-column">
-                            <label htmlFor="isthimaradue">Isthimaea Due Date</label>
+                            <label htmlFor="isthimaradue">Isthimara Due Date</label>
                             <input
                                 type="date"
                                 name="isthimaradue"
@@ -129,7 +129,7 @@ const PopupForm = ({ car, onSubmit, onClose }) => {
                             />
                         </div>
                     </div>
-                    <button type="submit" className="popup-submit-button">Submit</button>
+                    <button type="submit" className="popup-submit-button" onClick={onClose}>Submit</button>
                 </form>
             </div>
         </div>

@@ -1,15 +1,26 @@
+/* Define the light version of the font */
 @font-face {
-  font-family: 'Gotham Bold';
+  font-family: 'Gotham';
   src: url('/public/fonts/GothamLight.ttf') format('opentype');
-
+  font-weight: 300;
+  /* Light weight */
+  font-style: normal;
 }
+
+/* Define the bold version of the font */
+@font-face {
+  font-family: 'Gotham';
+  src: url('/public/fonts/Gotham-Bold.otf') format('opentype');
+  font-weight: 700;
+  /* Bold weight */
+  font-style: normal;
+}
+
 
 body {
   margin: 0;
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: 'Gotham', sans-serif;
   background-color: white;
-  border-right: 50px solid white;
-
 
 
   /* Adding a solid white border */
@@ -20,15 +31,18 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 h3 {
   font-size: 15px;
+  font-weight: lighter;
 }
 
 p {
   font-size: 14px;
+  font-weight: lighter;
 }
 
 /* Green theme */

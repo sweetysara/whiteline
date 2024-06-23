@@ -9,25 +9,29 @@
     width: 76.3%;
     height: 40px;
     border-top: 50px solid white;
-
+    border-right: 50px solid white;
 
     /* Adjusted height for better alignment */
     color: #FFFFFF;
     /* Set text color to white */
 }
 
-.header-main {}
+
 
 .header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 17px;
     font-weight: normal;
     /* Adjusted font weight to match the image */
     color: #FFFFFF;
     /* Set text color to white */
-    padding-left: 20px;
+    padding-left: 60px;
     text-transform: uppercase;
     /* Ensure text is in uppercase */
+}
+
+.header span {
+    font-weight: bold;
 }
 
 .search-container {
@@ -64,6 +68,16 @@
     /* Height to match the header */
     width: 1px;
     background-color: #FFFFFF;
+    /* Set the line color to white */
+    margin-right: 20px;
+    /* Space between the line and the profile container */
+}
+
+.vertical-line-car {
+    height: 40px;
+    /* Height to match the header */
+    width: 1px;
+    background-color: var(--secondary-color);
     /* Set the line color to white */
     margin-right: 20px;
     /* Space between the line and the profile container */

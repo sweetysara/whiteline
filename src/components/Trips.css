@@ -10,6 +10,7 @@
     width: 140px;
     height: 200px;
     border-radius: 10px;
+    margin-right: 20px;
 }
 
 .trips .trip-image::after {
@@ -46,7 +47,8 @@
     color: #8ab14d;
     top: 20px;
     left: 10px;
-    font-size: 12px;
+    font-size: 8px;
+    font-weight: bold;
     width: fit-content;
     z-index: 2;
     position: relative;
@@ -57,7 +59,7 @@
     font-size: 20px;
     margin: 0;
     z-index: 5;
-    top: 45px;
+    top: 55px;
     position: relative;
     padding: 10px;
 
@@ -70,7 +72,7 @@
     padding: 5px;
 
     font-size: 12px;
-    top: 40px;
+    top: 50px;
     width: fit-content;
     z-index: 2;
     position: relative;
@@ -85,7 +87,14 @@
 
 .trips h2 {
     text-align: start;
+
 }
+
+.trips h3 {
+    font-weight: bold;
+    font-size: 15px;
+}
+
 
 .trip-navigation {
     display: flex;
@@ -96,7 +105,7 @@
 }
 
 .future-trips {
-    margin-left: 200px;
+    margin-left: 150px;
 }
 
 .past-trips {
@@ -112,6 +121,11 @@
 .trip-container {
     display: flex;
     justify-content: space-between;
+}
+
+.trips {
+    padding-right: 20px;
+    margin-right: 5px;
 }
 
 .trips .trip {

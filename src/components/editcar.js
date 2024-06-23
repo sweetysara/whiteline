@@ -14,8 +14,7 @@ function EditCar() {
         { id: 4, name: 'Car 4', image: carImage },
         { id: 5, name: 'Car 5', image: carImage },
         { id: 6, name: 'Car 6', image: carImage },
-        { id: 7, name: 'Car 7', image: carImage },
-        { id: 8, name: 'Car 8', image: carImage },
+
     ];
 
     const handleEditClick = (car) => {
@@ -36,7 +35,7 @@ function EditCar() {
 
     return (
         <div className="edit-car-page">
-            <h2>Stock</h2>
+            <h2>AVAILABLE CARS</h2>
             <div className="car-grid">
                 {cars.map((car) => (
                     <div key={car.id} className="car-tile">

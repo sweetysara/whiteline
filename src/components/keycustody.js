@@ -16,7 +16,7 @@ const KeyCustody = () => {
     return (
         <div className="keycustody-table-container">
             <div className='headinsearch'>
-                <h3>Key Custody Details</h3>
+                <h2>KEY CUSTODY DETAILS</h2>
                 <input type="text" className="search-bar" placeholder="Search by Vehicle Number" />
             </div>
             <table className="keycustody-vehicle-table">
@@ -25,8 +25,8 @@ const KeyCustody = () => {
                     <tr>
                         <th>Vehicle Number</th>
                         <th>Vehicle Name</th>
-                        <th>Key Custody Driver ID</th>
-                        <th>Driver Name</th>
+                        <th>Key Custody </th>
+
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -35,7 +35,7 @@ const KeyCustody = () => {
                         <tr key={index}>
                             <td>{data.vehicleNumber}</td>
                             <td>{data.vehicleName}</td>
-                            <td>{data.driverId}</td>
+
                             <td>{data.driverName}</td>
                             <td><button className="keycustody-action-button">Edit</button></td>
                         </tr>

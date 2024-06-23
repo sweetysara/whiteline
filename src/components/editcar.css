@@ -11,7 +11,10 @@
 .edit-car-page {
     background-color: var(--background-color);
     padding: 20px;
-    border-radius: 8px;
+    border-left: 50px solid white;
+    border-top: 50px solid white;
+
+
 }
 
 h2 {
@@ -25,7 +28,7 @@ h2 {
     grid-template-columns: repeat(3, 220px);
     /* 3 columns with each being 220px wide */
     justify-content: center;
-    gap: 60px;
+    gap: 30px;
     /* Set gap between grid items to 20px */
 }
 
@@ -42,8 +45,8 @@ h2 {
 
 .car-image {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 250px;
+    border-radius: 10px;
 }
 
 .car-details {

@@ -4,7 +4,7 @@ import logo from '../assets/images/logo.png'; // Adjust the path based on your f
 
 function Sidebar() {
     const [activeItem, setActiveItem] = useState('dashboard');
-    const sectionRefs = useRef([]);
+    const sectionRefs = useRef({});
 
     const handleItemClick = (item) => {
         setActiveItem(item);
@@ -12,6 +12,11 @@ function Sidebar() {
     };
 
     useEffect(() => {
+        const sections = ['dashboard', 'profile', 'ride-history', 'vehicle-maintenance', 'notifications', 'reviews', 'navigation', 'settings'];
+        sections.forEach(section => {
+            sectionRefs.current[section] = document.getElementById(section);
+        });
+
         const observerOptions = {
             root: null,
             rootMargin: '0px',
@@ -27,7 +32,8 @@ function Sidebar() {
         };
 
         const observer = new IntersectionObserver(observerCallback, observerOptions);
-        sectionRefs.current.forEach((ref) => {
+        sections.forEach(section => {
+            const ref = sectionRefs.current[section];
             if (ref) observer.observe(ref);
         });
 
@@ -55,16 +61,17 @@ function Sidebar() {
                             Vehicle
                         </a>
                     </li>
-                    <li className={activeItem === 'ride-history' ? 'active' : ''} onClick={() => handleItemClick('ride-history')}>
-                        <a href="#ride-history">
-                            <i className="fa fa-map-marker"></i>
-                            Trips
-                        </a>
-                    </li>
+
                     <li className={activeItem === 'vehicle-maintenance' ? 'active' : ''} onClick={() => handleItemClick('vehicle-maintenance')}>
                         <a href="#vehicle-maintenance">
                             <i className="fas fa-user"></i>
                             Driver
+                        </a>
+                    </li>
+                    <li className={activeItem === 'ride-history' ? 'active' : ''} onClick={() => handleItemClick('ride-history')}>
+                        <a href="#ride-history">
+                            <i className="fa fa-map-marker"></i>
+                            Trips
                         </a>
                     </li>
                     <li className={activeItem === 'notifications' ? 'active' : ''} onClick={() => handleItemClick('notifications')}>
