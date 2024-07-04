@@ -158,3 +158,14 @@ textarea.input-line {
     font-size: 12px;
 }
 
+@media (max-width: 668px) {
+    .social-icons {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .social-icons a {
+        font-size: 3.5em;
+    }    
+
+}

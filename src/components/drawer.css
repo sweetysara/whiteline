@@ -44,3 +44,9 @@
 .close-button:hover {
     transform: scale(1.1);
 }
+
+@media (max-width: 668px) {
+    .drawer.open {
+        top: 100px; /* Slide in to the top of the viewport */
+    }
+}
