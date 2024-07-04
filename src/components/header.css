@@ -130,7 +130,7 @@
     }
 
     .active .nav {
-        margin-top: auto;
+        margin-top:3%;
         position: absolute;
         height: auto;
         visibility: visible;
@@ -139,6 +139,7 @@
         padding-top: 20px;
         max-height: 500px;
         z-index: -1;
+        background-color: #B35271;
     }
 
     .active .nav a {
@@ -195,5 +196,17 @@
             opacity: 1;
             transform: translateY(0);
         }
+    }
+}
+
+@media (max-width: 668px) {
+    .active .nav {
+        margin-top: 4%; /* Slide in to the top of the viewport */
+    }
+}
+
+@media (max-width: 468px) {
+    .active .nav {
+        margin-top: 3%; /* Slide in to the top of the viewport */
     }
 }
