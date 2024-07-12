@@ -63,6 +63,12 @@
     background-color: white;
     border-radius: 30px;
 }
+.nav a.active {
+    /* Apply same hover effect when drawer is open */
+    background-color: white;
+    color: black;
+    font-weight:500; /* Same hover color as regular header */
+}
 
 .toggle {
     display: none;

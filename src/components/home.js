@@ -49,7 +49,7 @@ const Home = () => {
                 </div>
                 <div className={`number ${isContentVisible ? 'show' : ''}`}>
                     <h2>Call Us</h2>
-                    <span>9633220088</span>
+                    <span>8891676143</span>
                 </div>
             </div>
         </div>

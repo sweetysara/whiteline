@@ -144,9 +144,9 @@ const ContactUs = () => {
                 </form>
                 <div className="contact-info">
                     <h3>Contact Information</h3>
-                    <p>Address: White House, Koratty P O Thrissur 680000</p>
-                    <p>Phone: 9633220088</p>
-                    <p>Email: whiteline.co.in</p>
+                    <p>Address: WHITE SMART SPACE<br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Infopark, Koratty P O<br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thrissur 680000</p>
+                    <p>Phone:&nbsp;&nbsp;&nbsp;&nbsp;+91 8891676143</p>
+                    <p>Email:&nbsp;&nbsp;&nbsp;&nbsp;anjalasuhana@whiteline.co.in</p>
                     <div className='social-media'>
                         <h3>Follow Us On</h3>
                         <p>Stay updated with the latest news and insights by connecting with us on:</p>
