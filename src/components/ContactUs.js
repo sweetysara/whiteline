@@ -56,7 +56,7 @@ const ContactUs = () => {
         };
 
         // Send email using EmailJS
-        emailjs.send('service_mdumb7c', 'template_70iri86', emailParams, 'uvZi5R3d_cqUtS4Fw')
+        emailjs.send('service_630412g', 'template_ydj6iyt', emailParams, 'OXHGABedr6njvwKwH')
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Form submitted successfully!');
