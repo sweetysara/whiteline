@@ -1,26 +1,27 @@
 import React, { useState } from 'react';
 import './drawer_content.css'; // Assuming your CSS file is properly imported
+import emailjs from 'emailjs-com';
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
-        name: '',
-        companyName: '',
+        firstName: '',
+        lastName: '',
         email: '',
-        phone: '',
+        phoneNumber: '',
         date: '',
         time: ''
     });
     const [submitted, setSubmitted] = useState(false);
     const [formErrors, setFormErrors] = useState({
-        name: false,
-        companyName: false,
+        firstName: false,
+        lastName: false,
         email: false,
-        phone: false,
+        phoneNumber: false,
         date: false,
         time: false
     });
 
-    const handleInputChange = (e) => {
+    const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
         setFormErrors({ ...formErrors, [name]: false });
@@ -30,33 +31,51 @@ const ContactUs = () => {
         e.preventDefault();
 
         // Validate all fields are filled
-        const { name, companyName, email, phone, date,time } = formData;
-        if (!name || !companyName || !email || !phone || !date || !time) {
+        const { firstName, lastName, email, phoneNumber, date, time } = formData;
+        if (!firstName || !lastName || !email || !phoneNumber || !date || !time) {
             // Set error state for empty fields
             setFormErrors({
-                name: !name,
-                companyName: !companyName,
+                firstName: !firstName,
+                lastName: !lastName,
                 email: !email,
-                phone: !phone,
+                phoneNumber: !phoneNumber,
                 date: !date,
                 time: !time
             });
             return;
         }
 
-        // Handle form submission logic here (for demo, just clear form and show success message)
-        setFormData({
-            name: '',
-            companyName: '',
-            email: '',
-            phone: '',
-            date: '',
-            time: ''
-        });
-        setSubmitted(true);
-        setTimeout(() => {
-            setSubmitted(false);
-        }, 3000); // 3000 milliseconds = 3 seconds
+        // Prepare email parameters for EmailJS
+        const emailParams = {
+            firstName,
+            lastName,
+            email,
+            phoneNumber,
+            date,
+            time
+        };
+
+        // Send email using EmailJS
+        emailjs.send('service_mdumb7c', 'template_70iri86', emailParams, 'uvZi5R3d_cqUtS4Fw')
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Form submitted successfully!');
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    phoneNumber: '',
+                    date: '',
+                    time: ''
+                });
+                setSubmitted(true);
+                setTimeout(() => {
+                    setSubmitted(false);
+                }, 3000); // Reset submitted state after 3 seconds
+            }, (err) => {
+                console.log('FAILED...', err);
+                alert('Failed to submit the form.');
+            });
     };
 
     return (
@@ -69,36 +88,58 @@ const ContactUs = () => {
                     <h3>Schedule a Conversation</h3>
                     <p>To schedule a consultation or request more information, please fill out the form below. One of our representatives will contact you shortly to arrange a convenient time.</p>
 
-                    <label>
-                        Name:
-                        <input type="text" name="name" value={formData.name} onChange={handleInputChange} className={`input-line ${formErrors.name ? 'error' : ''}`} />
-                        {formErrors.name && <span className="error-text">Name is required</span>}
-                    </label>
-                    <label>
-                        Company Name:
-                        <input type="text" name="companyName" value={formData.companyName} onChange={handleInputChange} className={`input-line ${formErrors.companyName ? 'error' : ''}`} />
-                        {formErrors.companyName && <span className="error-text">Company Name is required</span>}
-                    </label>
-                    <label>
-                        Email:
-                        <input type="email" name="email" value={formData.email} onChange={handleInputChange} className={`input-line ${formErrors.email ? 'error' : ''}`} />
-                        {formErrors.email && <span className="error-text">Valid Email is required</span>}
-                    </label>
-                    <label>
-                        Phone Number:
-                        <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className={`input-line ${formErrors.phone ? 'error' : ''}`} />
-                        {formErrors.phone && <span className="error-text">Phone Number is required</span>}
-                    </label>
-                    <label>
-                        Preferred Date:
-                        <input type="date" name="date" value={formData.date} onChange={handleInputChange} className={`input-line ${formErrors.date ? 'error' : ''}`} />
-                        {formErrors.date && <span className="error-text">Preferred Date is required</span>}
-                    </label>
-                    <label>
-                        Preferred Time:
-                        <input type="time" name="time" value={formData.time} onChange={handleInputChange} className={`input-line ${formErrors.time ? 'error' : ''}`} />
-                        {formErrors.time && <span className="error-text">Preferred Time is required</span>}
-                    </label>
+                    <div className="c-form-field-row">
+                        <input
+                            type="text"
+                            name="firstName"
+                            placeholder="First Name"
+                            className={`c-input-field ${formErrors.firstName ? 'error' : ''}`}
+                            value={formData.firstName}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="text"
+                            name="lastName"
+                            placeholder="Last Name"
+                            className={`c-input-field ${formErrors.lastName ? 'error' : ''}`}
+                            value={formData.lastName}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="c-form-field-row">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            className={`c-input-field ${formErrors.email ? 'error' : ''}`}
+                            value={formData.email}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="tel"
+                            name="phoneNumber"
+                            placeholder="Phone Number"
+                            className={`c-input-field ${formErrors.phoneNumber ? 'error' : ''}`}
+                            value={formData.phoneNumber}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="c-form-field-row">
+                        <input
+                            type="date"
+                            name="date"
+                            className={`c-input-field ${formErrors.date ? 'error' : ''}`}
+                            value={formData.date}
+                            onChange={handleChange}
+                        />
+                        <input
+                            type="time"
+                            name="time"
+                            className={`c-input-field ${formErrors.time ? 'error' : ''}`}
+                            value={formData.time}
+                            onChange={handleChange}
+                        />
+                    </div>
                     <button type="submit" className="submit-button">Submit</button>
                 </form>
                 <div className="contact-info">
